@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atillaeren.socialapp">
+    <!-- Internet Permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".SocialApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/art_valley"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/art_valley"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".GroupEditActivity" />
+
+        <activity android:name=".GroupInfoActivity" />
+
+        <activity android:name=".AddParticipantActivity" />
+
+        <activity
+            android:name=".GroupChatActivity"
+            android:theme="@style/AppThemeNo" />
+
+        <activity android:name=".GroupCreateActivity" />
+
+        <activity android:name=".LikesActivity" />
+
+        <activity android:name=".PostDetailActivity" />
+
+        <activity android:name=".ThereProfileActivity" />
+        <!--
+ Intent filters inform the system what intents an application component is willing to accept.
+             To receive text/image type of intents we will add intent filter to activity, that will handle data
+        -->
+        <activity android:name=".AddPostActivity"
+            android:exported="true">
+            <intent-filter>
+
+                <!-- image -->
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+
+                <!-- text -->
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ChatActivity"
+            android:theme="@style/AppThemeNo" />
+
+        <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".DashboardActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegisterActivity"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppThemeNo"/>
+        <!-- define file provider -->
+        <!--set the android:exported attribute to false;the fileProvider doesn't need to be public-->
+        <!--Set the android:grantUriPermissions attribute to true, to allow you to grant temporary access files.-->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.atillaeren.socialapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths" />
+        </provider>
+    </application>
+
+</manifest>

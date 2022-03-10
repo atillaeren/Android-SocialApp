@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="vertical">
+
+        <!--EditText: Input post title-->
+        <EditText
+            android:id="@+id/pTitleEt"
+            android:background="@drawable/editextstyle"
+            android:padding="10dp"
+            android:hint="Enter title"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue"/>
+
+        <!--ImageView: Input post image-->
+        <ImageView
+            android:id="@+id/pImageIv"
+            android:background="@color/common_google_signin_btn_text_light_disabled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="250dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+
+        <!--EditText: Input post description-->
+        <EditText
+            android:id="@+id/pDescriptionEt"
+            android:background="@drawable/editextstyle"
+            android:padding="10dp"
+            android:hint="Enter description"
+            android:inputType="textCapSentences|textMultiLine"
+            android:minHeight="120dp"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/blue" />
+
+        <!--Button: Publish post to firebase-->
+        <Button
+            android:id="@+id/pUploadBtn"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:text="Upload"
+            android:textColor="@color/reply_orange_500"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_marginTop="10dp"/>
+
+
+    </LinearLayout>
+
+</ScrollView>

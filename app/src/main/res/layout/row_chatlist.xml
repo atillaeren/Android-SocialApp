@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:contentPadding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--ImageView: User Profile Image-->
+        <com.github.abdularis.civ.CircleImageView
+            android:id="@+id/profileIv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_default_img"/>
+
+        <!--ImageView: online/offline Status-->
+        <ImageView
+            android:id="@+id/onlineStatusIv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"/>
+
+        <!--TextView: Username-->
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="His Name"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/profileIv"/>
+
+        <!--TextView: Last message (by sender/receiver)-->
+        <TextView
+            android:id="@+id/lastMessageTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="The last message"
+            android:layout_marginStart="4dp"
+            android:maxLines="2"
+            android:layout_marginTop="3dp"
+            android:layout_toEndOf="@+id/profileIv"
+            android:layout_below="@+id/nameTv"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

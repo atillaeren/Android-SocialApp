@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/messageLayout"
+    android:padding="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.abdularis.civ.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/profileIv"
+            android:src="@drawable/ic_default_img" />
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_receiver"
+            android:padding="15dp"
+            android:text="His Message"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/messageIv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:padding="15dp"
+            android:src="@drawable/ic_image_black"
+            android:scaleType="fitCenter"
+            android:background="@drawable/bg_receiver" />
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25/05/2021 23:58PM"
+            android:textColor="@color/black"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:visibility="gone"
+        android:textAlignment="textEnd"
+        android:text="Delivered"/>
+
+
+</LinearLayout>

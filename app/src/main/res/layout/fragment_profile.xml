@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F1EDED"
+    tools:context=".fragments.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Cover Photo-->
+            <ImageView
+                android:id="@+id/coverIv"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:background="@color/reply_blue_700">
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="100dp">
+
+                <ImageView
+                    android:id="@+id/avatarIv"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/reply_blue_600"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_default_img"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#77000000">
+
+                    <TextView
+                        android:id="@+id/nameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="30sp"
+                        android:textColor="@color/white" />
+                   <TextView
+                        android:id="@+id/emailTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/mottoTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:textColor="@color/white"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--RecyclerView user specific posts-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_posts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/linearLayout"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--Floating action button-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_edit_white"
+        app:backgroundTint="@color/reply_orange_500" />
+</RelativeLayout>

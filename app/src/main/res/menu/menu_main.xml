@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_logout"
+        android:title="Logout"/>
+
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item android:id="@+id/action_add_post"
+        android:title="Add Post"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_white"/>
+
+    <!-- has to be on chats and users fragment, hide on others-->
+    <item android:id="@+id/action_create_group"
+        android:title="Create Group"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_create_group_white"/>
+
+    <item android:id="@+id/action_add_participant"
+        android:title="Add Participant"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_add_group_participant"/>
+
+    <item android:id="@+id/action_groupInfo"
+        android:title="Group Info"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_info_white"/>
+</menu>

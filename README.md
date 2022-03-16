@@ -1,5 +1,18 @@
 # SocialApp
- You should add your database to project(project created with firebase).
+
+ A basic social media app which includes profile, in-app messaging, create social groups, post sharing etc..
+ 
+ Features
+ 
+- Google sign-in
+- Edit profile
+- Post video or photo
+- Edit and share posts
+- Comment and like on posts
+- Chat with people
+- Delete messages on personal and group chat
+- Block or unblock users
+ 
  
  ![socialapp1](https://user-images.githubusercontent.com/73060548/157740031-8d4069ef-13c6-4ac9-958b-049fe0798195.png)                       ![socialapp3](https://user-images.githubusercontent.com/73060548/157740415-9e6b8ef9-e769-4a2a-a45b-d497c2f0cbe5.png)
 
@@ -9,5 +22,5 @@
 
 ![socialapp6](https://user-images.githubusercontent.com/73060548/157740451-96ad498b-637c-4841-9657-8d97dc32b834.png)                       ![socialapp9](https://user-images.githubusercontent.com/73060548/157740650-42aa5575-746f-4cae-80b3-591027afc660.png)
 
-
+You should add your database to project(project created with firebase).
 
